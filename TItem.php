@@ -1,15 +1,19 @@
 <?php
-
+//TODO: Implementar
 require "DataModel/Item.php";
 
 class TItem
 {
-    private TProducto $producto;
+    private Item $item;
+
+    public function __construct($codigoBarra)
+    {
+        $importe = new Producto($codigoBarra);
+        $this->item = new Item();
+    }
 
     public function darImporteItem()
     {
-        $producto = new TProducto();
-        $producto->
-        )
+        $valorProducto = $this->producto->getImporte();
     }
 }

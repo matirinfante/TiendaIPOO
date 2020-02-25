@@ -5,7 +5,7 @@ class TProducto
 {
     private Producto $producto;
 
-    public function __construct(int $codigobarra, string $nombre, string $marca, string $color, string $descripcion, int $cantstock, float $importe)
+    public function __construct(int $codigobarra, string $nombre = null, string $marca = null, string $color = null, string $descripcion = null, int $cantstock = null, float $importe = null)
     {
         $producto = new Producto($codigobarra, $nombre, $marca, $color, $descripcion, $cantstock, $importe);
     }
