@@ -4,12 +4,9 @@ require "DataModel/Item.php";
 
 class TItem
 {
-    private Item $item;
 
-    public function __construct($codigoBarra)
+    public function __construct()
     {
-        $importe = new Producto($codigoBarra);
-        $this->item = new Item();
     }
 
     public function darImporteItem()

@@ -3,19 +3,41 @@ require "DataModel/Producto.php";
 
 class TProducto
 {
-    private Producto $producto;
 
-    public function __construct(int $codigobarra, string $nombre = null, string $marca = null, string $color = null, string $descripcion = null, int $cantstock = null, float $importe = null)
+    public function __construct()
     {
-        $producto = new Producto($codigobarra, $nombre, $marca, $color, $descripcion, $cantstock, $importe);
     }
 
-    public function actualizarStock($cantidad, $producto)
+    public function altaProducto()
     {
-        if ($cantidad <> 0) {
-            $stockActual = $this->producto->getCantstock() + $cantidad;
-            $this->producto->setCantstock($stockActual);
-            $this->producto->modificar();
+        //TODO: Alta producto
+    }
+
+    public function bajaProducto($idProducto)
+    {
+        $producto = new Producto();
+        if ($producto->buscar($idProducto)) {
+            $producto->eliminar();
+        }
+    }
+
+    public function modificarProducto($idProducto)
+    {
+        $producto = new Producto();
+        if ($producto->buscar()) {
+            //TODO modificar producto
+        }
+    }
+
+    public function actualizarStock($cantidad, $idProducto)
+    {
+        $producto = new Producto();
+        if ($producto->buscar($idProducto)) {
+            if ($cantidad <> 0) {
+                $stockActual = $producto->getCantstock() + $cantidad;
+                $producto->setCantstock($stockActual);
+                $producto->modificar();
+            }
         }
     }
 }

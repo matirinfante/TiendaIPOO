@@ -21,7 +21,7 @@ class Producto
      * @param int $cantstock
      * @param float $importe
      */
-    public function __construct(int $codigobarra, string $nombre = null, string $marca = null, string $color = null, string $descripcion = null, int $cantstock = null, float $importe = null)
+    public function __construct(int $codigobarra = null, string $nombre = null, string $marca = null, string $color = null, string $descripcion = null, int $cantstock = null, float $importe = null)
     {
         $this->codigobarra = $codigobarra;
         $this->nombre = $nombre;
