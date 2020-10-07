@@ -14,14 +14,14 @@ class BaseDatos
 
     /**
      * Constructor de la clase que inicia ls variables instancias de la clase
-     * vinculadas a la coneccion con el Servidor de BD
+     * vinculadas a la conexion con el Servidor de BD
      */
     public function __construct()
     {
-        $this->HOSTNAME = "127.0.0.1";
-        $this->BASEDATOS = "IPOO";
+        $this->HOSTNAME = "localhost";
+        $this->BASEDATOS = "dbtienda";
         $this->USUARIO = "root";
-        $this->CLAVE = "eelcdlv";
+        $this->CLAVE = "";
         $this->RESULT = 0;
         $this->QUERY = "";
         $this->ERROR = "";

@@ -10,7 +10,10 @@ class TProducto
 
     public function altaProducto()
     {
-        //TODO: Alta producto
+        $producto = new Producto(0, "p1", "m1", "red", "d1", 10, 150);
+        $producto->insertar();
+        $producto->listar();
+        return $producto;
     }
 
     public function bajaProducto($idProducto)
